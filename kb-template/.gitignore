@@ -1,0 +1,51 @@
+# macOS
+.DS_Store
+
+# Obsidian 配置（只在本地，不进仓库）
+.obsidian/
+
+# Obsidian HTML 导出缓存
+wiki/.html/
+
+# 临时文件
+*.tmp
+*.bak
+*~
+
+# Inbox 整个目录是 transient，/kb-ingest 处理完会把文件挪到 sources/。
+# 一刀切不进 git（避免 add -A 时把投递的原始资料误推到远程，
+# 而且 inbox 文件夹经常被你扔进大量 zip / pdf / 截图，不该污染 git 历史）。
+# 只保留 .gitkeep 占位让目录在 git 里存在。
+inbox/*
+!inbox/.gitkeep
+
+# Lint 临时报告
+.lint/*.tmp
+
+# Sources 大原档：跟精华 .md 同目录，Claude 处理完留在本地。
+# 本地不进 git（太大或 git 处理二进制不友好），但精华 .md / .xlsx / 小 png 还在 git。
+# 你定期看 sources/<dir>/ 里的大原档，挑要的传外部存储、然后本地 rm。
+sources/**/*.docx
+sources/**/*.pptx
+sources/**/*.psd
+sources/**/*.fig
+sources/**/*.sketch
+sources/**/*.ai
+sources/**/*.mp4
+sources/**/*.mov
+sources/**/*.mkv
+sources/**/*.mp3
+sources/**/*.wav
+sources/**/*.m4a
+
+# 大 PDF 默认进 git（精华），如果某个 source 目录积累了大量大 PDF，
+# 可以手工加目录级 ignore，例如：
+# sources/learning/<某课程全集>/**/*.pdf
+
+# 大量图片资产目录：如果某个 source 目录积累了几千张图，
+# 加目录级 ignore：
+# sources/learning/<某课程>/images/
+
+# 编辑器
+.vscode/
+.idea/
