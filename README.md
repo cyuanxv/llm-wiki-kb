@@ -1,10 +1,11 @@
 # kb-starter — Karpathy LLM Wiki Pattern 个人知识库脚手架
 
-<p align="center">
-  <img src="docs/demo/ingest-demo.gif" alt="kb-ingest 流程演示：拖文件进 inbox → Claude 改写 → 提交 git" width="720">
-</p>
+```
+拖文件进 inbox/  ─▶  跟 Claude 说"ingest 一下"  ─▶  主题驱动改写成 wiki  ─▶  双向回填 + git commit
+   任何格式              读 SCHEMA + INDEX            更新现有 / 新建            原档归档同目录共用 slug
+```
 
-<!-- 还没生成 gif？看 docs/demo/RECORDING.md 用 3 分钟录一段 -->
+<!-- 想要动图？docs/demo/RECORDING.md 里有 3 分钟录一段 gif 的配方，录好后把上面这段替换成 <img src="docs/demo/ingest-demo.gif" width="720"> 即可 -->
 
 把任何资料（PDF / docx / 转写 / 截图 / 英文播客）扔进 `inbox/`，跟 Claude Code 说"ingest 一下"，自动改写成**给未来的你看的**结构化 wiki + 双向回填 + git 留痕。
 
